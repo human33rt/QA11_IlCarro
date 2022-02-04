@@ -14,7 +14,6 @@ public class LoginTests extends TestBase{
             app.getUserHelper().logOut();
         }
     }
-
     @Test
     public void LoginPositiveTest(){
 
