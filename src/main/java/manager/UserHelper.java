@@ -1,5 +1,6 @@
 package manager;
 
+import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebDriver;
@@ -23,6 +24,11 @@ public class UserHelper extends HelperBase {
     public void fillLoginForm(String eMail, String password) {
         type(By.id("email"), eMail);
         type(By.id("password"), password);
+
+    }
+    public void fillLoginForm(User user) {
+        type(By.id("email"), user.getEmail());
+        type(By.id("password"), user.getPassword());
 
     }
 
@@ -85,6 +91,24 @@ public class UserHelper extends HelperBase {
 
     public void logOut() {
         click(By.xpath("//a[@href='/logout?url=%2Fsearch']"));
+    }
+
+    public void clickOkButton(){
+        if(isElementPresent(By.xpath("//button[text() ='Ok']"))){
+            click(By.xpath("//button[text() ='Ok']"));
+        }
+        //wd.findElement(By.xpath("//*[text()='Ok']")).click();
+
+    }
+
+
+    public void login(User user) {
+        openLoginForm();
+        fillLoginForm(user);
+        submitLogin();
+        clickOkButton();
+        pause(1000);
+
     }
 }
 
