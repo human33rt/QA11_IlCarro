@@ -21,11 +21,14 @@ public class CarHelper extends HelperBase {
         }
     }
 
-    private boolean isCarCreationFormPresent(){
-        Boolean isForm = new WebDriverWait(wd,10)
-                .until(ExpectedConditions
-                        .textToBePresentInElement(wd.findElement(By.cssSelector("h2")), "Write some"));
-return isForm;
+    // boolean isCarCreationFormPresent(){
+      //  Boolean isForm = new WebDriverWait(wd,10)
+              //  .until(ExpectedConditions
+                    //    .textToBePresentInElement(wd.findElement(By.cssSelector("h2")), "Write some details about you car to rent it"));
+//return isForm;
+    }
+   // public void attachedPhoto(){
+//wd.findElement(By.id("photos")).sendKeys("");
     }
 }
 

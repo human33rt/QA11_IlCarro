@@ -9,6 +9,7 @@ import lombok.ToString;
 @Setter
 @Builder
 @ToString
+
 public class Car {
 
     private String address;

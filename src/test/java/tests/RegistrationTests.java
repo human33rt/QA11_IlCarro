@@ -1,5 +1,6 @@
 package tests;
 
+import models.User;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -13,19 +14,22 @@ public class RegistrationTests extends TestBase{
     }
 
     @Test
-    public void regTestPositive () {
+    public void registrationPositiveTest() {
+        User user = new User().withName("Lis").withLastname("Snow").withEmail("snow" + i + "gmail.com").withPassword("");
+
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
-        String eMail = "noa" + i + "@gmail.com";
-        String password = "Nnoa12345$";
-        String name = "Galina";
-        String lastName = "Petrovna";
-        System.out.println("Email: " + eMail);
+       // String eMail = "noa" + i + "@gmail.com";
+       // String password = "Nnoa12345$";
+       // String name = "Galina";
+       // String lastName = "Petrovna";
+        //System.out.println("Email: " + eMail);
 
 
-        app.getUserHelper().openRegistrationForm();
-        app.getUserHelper().fillRegForm(name,lastName,eMail,password);
-        app.getUserHelper().submitCheckBoxXY();
-        app.getUserHelper().submitRegForm();
+        //app.getUserHelper().openRegistrationForm();
+        //app.getUserHelper().fillRegForm(name,lastName,eMail,password);
+        //app.getUserHelper().fillRegForm(user);
+        //app.getUserHelper().submitCheckBoxXY();
+        //app.getUserHelper().submitRegForm();
 
     }
 

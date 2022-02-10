@@ -47,10 +47,14 @@ public class UserHelper extends HelperBase {
 
 
     public void fillRegForm(String name, String lastName, String eMail, String password) {
-        type(By.id("name"), name);
-        type(By.id("lastName"), lastName);
-        type(By.id("email"), eMail);
-        type(By.id("password"), password);
+        type(By.id("name"), user.getName());
+       type(By.id("lastName"), user.getLastName());
+        type(By.id("email"), user.getEmail());
+       type(By.id("password").user.getPassord());
+        //type(By.id("name"), name);
+        // type(By.id("lastName"), lastName);
+        // type(By.id("email"), eMail);
+        // type(By.id("password"), password
 
 
     }

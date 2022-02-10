@@ -23,6 +23,7 @@ public class AddNewCarTests extends TestBase {
     @Test
     public void addNewCarPositive(){
         int i= (int)((System.currentTimeMillis()/1000)%3600);
+        Car car1 = Car.builder()
         Car car =Car.builder()
              .address("Tel Aviv")
              .make("BMW")
