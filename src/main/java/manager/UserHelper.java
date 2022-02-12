@@ -6,6 +6,8 @@ import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UserHelper extends HelperBase {
 
@@ -33,6 +35,8 @@ public class UserHelper extends HelperBase {
     }
 
     public void submitLogin() {
+        //pause(2000);
+        new WebDriverWait(wd,10).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
         click(By.xpath("//button[@type='submit']"));
     }
 
@@ -47,16 +51,16 @@ public class UserHelper extends HelperBase {
 
 
     public void fillRegForm(String name, String lastName, String eMail, String password) {
+        type(By.id("name"), name);
+        type(By.id("lastName"), lastName);
+        type(By.id("email"), eMail);
+        type(By.id("password"), password);
+    }
+    public void fillRegForm(User user) {
         type(By.id("name"), user.getName());
-       type(By.id("lastName"), user.getLastName());
+        type(By.id("lastName"), user.getLastname());
         type(By.id("email"), user.getEmail());
-       type(By.id("password").user.getPassord());
-        //type(By.id("name"), name);
-        // type(By.id("lastName"), lastName);
-        // type(By.id("email"), eMail);
-        // type(By.id("password"), password
-
-
+        type(By.id("password"), user.getPassword());
     }
 
     public void submitRegForm() {
@@ -64,19 +68,14 @@ public class UserHelper extends HelperBase {
     }
 
     public void submitCheckBox() {
-
         click(By.xpath("//label[@for = 'terms-of-use']"));
         //   click(By.cssSelector("label.checkbox-label.terms-label::before"));
     }
-
+    //if navigate to "term-of-use" is working
     public void submitCheckBoxXY() {
-
         WebElement label = wd.findElement(By.xpath("//label[@for = 'terms-of-use']"));
-
         Rectangle rectangle = label.getRect();
-
         Actions actions = new Actions(wd);
-
         actions.moveToElement(label).release().build().perform();
 
         int offSetX = rectangle.getWidth() / 2;
