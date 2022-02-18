@@ -93,7 +93,7 @@ public class UserHelper extends HelperBase {
     }
 
     public void logOut() {
-        click(By.xpath("//a[@href='/logout?url=%2Fsearch']"));
+        click(By.xpath("//a[text()=' Logout ']")); //17.02.2022
     }
 
     public void clickOkButton(){

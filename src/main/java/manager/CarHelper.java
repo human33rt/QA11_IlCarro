@@ -52,7 +52,7 @@ public class CarHelper extends HelperBase {
 
     }
     private void typeLocation(String address) {
-        type(By.id("pickUpPlace"),address);
+        type(By.id("pickUpPlace"),address); //for formSearch id=city
         click(By.cssSelector("div.pac-item"));
         pause(500);
     }

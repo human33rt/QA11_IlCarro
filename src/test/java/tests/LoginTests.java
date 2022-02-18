@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class LoginTests extends TestBase{
     @BeforeMethod
     public void preConditionMethod(){
-        if (!app.getUserHelper().isLogged()){
+        if (app.getUserHelper().isLogged()){
             app.getUserHelper().logOut();
         }
     }
