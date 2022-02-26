@@ -39,11 +39,17 @@ public class User {
     }
 
     public String getLastname() {
-        return lastname;
+        return lastname;}
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", lastname='" + lastname + '\'' +
+                '}';
     }
 
-   // @Override
-   // public String toString(){
+    }
 
-   // }
-}

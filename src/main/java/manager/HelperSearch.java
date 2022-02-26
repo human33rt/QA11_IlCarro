@@ -81,7 +81,7 @@ public class HelperSearch extends HelperBase {
                 ==0? to.getMonthValue()-from.getMonthValue() :12- from.getMonthValue()+to.getMonthValue();
         clickNextMonth(monthDiff);
 
-        dataLocator = String.format("//div[text()=' %s ']",from.getDayOfMonth());
+        dataLocator = String.format("//div[text()=' %s ']",to.getDayOfMonth());
         click(By.xpath(dataLocator));
     }
     private void clickNextMonth (int count){

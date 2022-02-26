@@ -1,5 +1,6 @@
 package tests;
 
+import com.sun.media.jfxmedia.logging.Logger;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -17,9 +18,12 @@ public class LoginTests extends TestBase{
     }
     @Test
     public void LoginPositiveTest(){
+        logger.info("LoginPositiveTest");
         User user = new User().withEmail("noa@gmail.com").withPassword("Nnoa12345$");
-        app.getUserHelper().openLoginForm();
+        logger.info("LoginPositiveTest");
+
         //app.getUserHelper().fillLoginForm("noa@gmail.com", "Nnoa12345$");
+        app.getUserHelper().openLoginForm();
         app.getUserHelper().fillLoginForm(user);
         app.getUserHelper().submitLogin();
         //find OK button

@@ -19,6 +19,7 @@ public class AddNewCarTests extends TestBase {
         if(!app.getUserHelper().isLogged()){
             app.getUserHelper().login(new User().withEmail("noa@gmail.com").withPassword("Nnoa12345$"));
             app.getUserHelper().pause(5000);
+            //logger.info("Car was added for user" + user.toString);
         }
 
     }
@@ -47,6 +48,7 @@ public class AddNewCarTests extends TestBase {
                 .withTypeFeature("feature")
                 .withAbout("very nice");
 
+        logger.info("Car was added" + car.toString());
         app.getCar().openCarForm();
         app.getCar().fillCarForm(car);
         app.getCar().attachedPhoto();
