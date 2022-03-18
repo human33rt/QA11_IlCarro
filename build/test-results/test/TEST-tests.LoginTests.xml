@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.LoginTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-03-18T08:02:01" hostname="DESKTOP-B7SSTIV" time="13.242">
+  <properties/>
+  <testcase name="LoginPositiveTest" classname="tests.LoginTests" time="1.053"/>
+  <testcase name="LoginPositiveTest2" classname="tests.LoginTests" time="0.954"/>
+  <testcase name="LoginWrongPasswordTest" classname="tests.LoginTests" time="10.61"/>
+  <system-out><![CDATA[11:02:01. INFO  tests.TestBase - Test name ----->LoginPositiveTest
+11:02:01. INFO  tests.TestBase - LoginPositiveTest
+11:02:01. INFO  tests.TestBase - LoginPositiveTest
+11:02:02. INFO  tests.TestBase - Test endLoginPositiveTest
+11:02:02. INFO  tests.TestBase - Test name ----->LoginPositiveTest2
+11:02:03. INFO  tests.TestBase - Test endLoginPositiveTest2
+11:02:03. INFO  tests.TestBase - Test name ----->LoginWrongPasswordTest
+11:02:14. INFO  tests.TestBase - Test endLoginWrongPasswordTest
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

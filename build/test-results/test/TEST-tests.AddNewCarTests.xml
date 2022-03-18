@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.AddNewCarTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-18T08:01:53" hostname="DESKTOP-B7SSTIV" time="7.958">
+  <properties/>
+  <testcase name="addNewCarPositive" classname="tests.AddNewCarTests" time="7.958"/>
+  <system-out><![CDATA[11:01:34. INFO  tests.TestBase - Test name ----->addNewCarPositive
+11:01:53. INFO  tests.TestBase - Car was addedmodels.Car@a0b3527
+Write some details about your car to rent it out
+11:02:01. INFO  tests.TestBase - Test endaddNewCarPositive
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
